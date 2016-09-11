@@ -53,11 +53,24 @@ export const Container = React.createClass({
 
           <div className={styles.list}>
             <h1>Sidebar</h1>
+            
+            <h2>Filters</h2>
+            <p>Min</p>
+            <input type="number" step="25" pattern="\d*" placeholder="100"></input>
+            
+            <p>Max</p>
+            <input type="number" step="25" pattern="\d*" placeholder="900"></input>
+
+            <h3>Types</h3>
+            <label htmlFor="cheackbox_leaseswap">Lease swap</label>
+            <input name="cheackbox_leaseswap" type="checkbox"></input>
+            <label htmlFor="cheackbox_fulllease">Sublet</label>
+            <input name="cheackbox_fulllease" type="checkbox"></input>
           </div>
           <div className={styles.content}>
             {map}
           </div>
-          
+
         </div>
       </div>
     )
