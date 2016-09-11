@@ -2,6 +2,7 @@ import React, {PropTypes as T} from 'react'
 import ReactDOM from 'react-dom'
 import {Link} from 'react-router'
 import GitHubForkRibbon from 'react-github-fork-ribbon'
+import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap'
 
 let GoogleApiWrapper;
 if (__IS_DEV__) {
@@ -47,13 +48,14 @@ export const Container = React.createClass({
 
         <div className={styles.header}>
           <h1>Hello World</h1>
+
         </div>     
 
         <div className={styles.wrapper}>
 
           <div className={styles.list}>
             <h1>Sidebar</h1>
-            
+
             <h2>Filters</h2>
             <p>Min</p>
             <input type="number" step="25" pattern="\d*" placeholder="100"></input>
