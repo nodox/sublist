@@ -41,30 +41,23 @@ export const Container = React.createClass({
     const {routeMap, routeDef} = this.props;
     const {router} = this.context;
 
-    const c = this.renderChildren();
+    const map = this.renderChildren();
     return (
       <div className={styles.container}>
+
+        <div className={styles.header}>
+          <h1>Hello World</h1>
+        </div>     
+
         <div className={styles.wrapper}>
+
           <div className={styles.list}>
-            <ul>
-              {Object.keys(routeMap).map(key => {
-                return (
-                  <Link to={key}
-                        activeClassName={styles.active}
-                        key={key}>
-                    <li>{routeMap[key].name}</li>
-                  </Link>
-                )
-              })}
-            </ul>
+            <h1>Sidebar</h1>
           </div>
           <div className={styles.content}>
-            <div className={styles.header}>
-              <h1>{routeDef && routeDef.name} Example</h1>
-              <h2><a href="https://github.com/fullstackreact/google-maps-react/blob/master/README.md">Readme</a></h2>
-            </div>
-            {c}
+            {map}
           </div>
+          
         </div>
       </div>
     )
