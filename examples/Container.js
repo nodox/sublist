@@ -44,11 +44,6 @@ export const Container = React.createClass({
     const c = this.renderChildren();
     return (
       <div className={styles.container}>
-        <GitHubForkRibbon href="//github.com/fullstackreact/google-maps-react"
-                  target="_blank"
-                  position="right">
-          Fork me on GitHub
-        </GitHubForkRibbon>
         <div className={styles.wrapper}>
           <div className={styles.list}>
             <ul>
